@@ -17,3 +17,8 @@ def check_stats():
     tool = tools[game["tool"]]
     print(f"You currently have {game['money']} and are using a {tool['name']}")
     
+def upgrade():
+    next_tool = tools[game["tool"]+1]
+    if(next_tool == None):
+        print("There are no more tools")
+        return 0
