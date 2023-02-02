@@ -22,3 +22,15 @@ def upgrade():
     if(next_tool == None):
         print("There are no more tools")
         return 0
+    
+    if(game["money"] < next_tool["cost"]):
+        print("Not enough to buy tool")
+        return 0
+    game["money"] -= next_tool["cost"]
+    game["tool"] += 1
+    
+def win_check():
+    if(game["tool"] == 1 and game["money"] == 1000):
+        print("You win")
+        return True
+    return False
