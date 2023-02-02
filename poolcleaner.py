@@ -7,3 +7,8 @@ tools = {
 }
 
 ## Game Option Function
+
+def clean_pool():
+    tool = tools[game["tool"]]
+    print(f"You clean a pool with your {tool['name']} and make {tool['profit']}")
+    game["money"] += tool["profit"]
